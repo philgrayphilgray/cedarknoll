@@ -1,0 +1,58 @@
+#history{
+	background-color: $cedarLightGold;
+	@include mappy-bp(large){
+	@include backImage('../images/history.jpg', 800px, shade($cedarBlue, 80%), transparent);
+
+/* 	min-height: 100vh; */
+	background-position: bottom right;
+
+	.text-content{
+		color: $cedarLightGold;
+		font-size: 2.5rem;
+		line-height: 120%;
+
+		em{
+			color: $cedarGold;
+		}
+	}
+	}
+
+	em{
+		color: $cedarBrown;
+	}
+
+.icon4{
+	  display: inline-block;
+	width: 47px;
+height: 60px;
+background: url('../images/icon4.png');
+  vertical-align: -30%;
+	  margin-right: $spacing-unit/2;
+}
+	@include mappy-bp(large){
+		.icon4{
+background: url('../images/icon4g.png');
+		}
+	}
+
+
+.headline span svg{
+  display: inline-block;
+  margin-right: $spacing-unit;
+	  width: 6rem;
+  height: 8rem;
+
+
+  vertical-align: -50%;
+
+	@include mappy-bp(large){
+
+
+		fill: $cedarGold;
+/* background: none;
+			background-color: $cedarGold;
+	mask-image: url('../images/icon4.svg'); */
+	}
+}
+
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <meta name="robots" content="index, nofollow">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:site_name" content="{{ meta.title }}">
+  <meta property="og:url" content="{{ meta.url }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="{{ meta.url }}{{ meta.share-fb }}" />
+
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {% include "shared/app-icons.html" %} {% block head %}{% endblock %} {% include "shared/typekit.html" %} {% include "shared/ga.html"
+  %}
+  <!--[if lt IE 9]>
+    <script src="html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  {% from 'macros/helpers.html' import sprite %}
+  <header class="header" id="home">
+    <nav class="nav" role="navigation">
+      <div class="nav-elements">
+        <div class="branding">
+          <a href="#home">
+                        <img src="images/logostack.png" />
+                    </a>
+        </div>
+      </div>
+    </nav>
+    <!-- branding -->
+    <div class="container tagline">
+      <h1 class="headline">{{ meta.shortTitle }}</h1>
+      <p> {{ meta.tagline }}</p>
+    </div>
+    <!-- container tagline -->
+    <div class="container primaryinfo">
+      <div class="hoursandlocation">
+        {% for key, item in hours %}
+        <p>
+          <span>&mdash;{{ item.title }}&mdash;</span>
+          <span class="times">{{ item.days }}, <em>{{ item.hours }}</em></span> {% if item.other %}
+          <span class="times">{{ item.other.days }}, <em>{{ item.other.hours }}</em></span> {% endif %}
+        </p>
+        {% endfor %}
+        <span class="facebook-icon"><a href="{{ social.facebook.url }}">{{ sprite('06-facebook') }}</a></span>
+        <span class="address">
+              <a href="{{ contact.maps.google }}" target="_blank">
+                 {{ sprite('place') }}
+                {{ contact.address }}</a>
+            </span>
+        <span class="phone">
+              <a href="tel:{{ contact.phone }}">
+                {{ sprite('phone') }}
+                (703) 780-3665</a>
+            </span>
+
+      </div>
+      <a class="makereservation" href="{{ reservations.url }}{{ reservations.id }}{{ reservations.param }}" target="_blank">{{ reservations.cta }}</a>
+
+    </div>
+    <a class="chevron" href="#menus">
+              {{ sprite('down') }}
+              </a>
+  </header>
+  <!-- #home -->
+  <section class="section" id="menus">
+
+    <div class="container">
+      <div class="text-content clearfix">
+        <h2 class="headline">Menus<span class="icon1"></span>
+        </h2>
+
+        <div class="floatleft clearfix">
+
+          <p><a href="pdf/dinner.pdf" target="_blank"><em>dinner</em></a>
+            <br>in the beginning; showcase.
+            <a href="pdf/examplespecials.pdf" target="_blank">example of the specials</a>.
+
+          </p>
+
+          <p><a href="pdf/dessert.pdf" target="_blank"><em>denouement</em></a><br>the final outcome of the story, generally
+            occurring after the climax of the plot</p>
+          <p><a href="pdf/lunch.pdf" target="_blank"><em>lunch</em></a></p>
+          <p><a href="pdf/brunch.pdf" target="_blank"><em>sunday brunch</em></a></p>
+        </div>
+
+      </div>
+    </div>
+    <!-- container text -->
+  </section>
+
+  <!-- #food -->
+
+
+  <section class="section" id="history">
+    <div class="container">
+      <div class="text-content">
+        <h2 class="headline"><span class="icon4"></span>History</h2>
+        <p>The land on which Cedar Knoll now stands was acquired in 1654 by a prominent aristocrat and his wife, a princess
+          of the Piscataway tribe, for their one-year old son, Giles Brent, Jr. and named <em>Piscataway Neck</em>. The son,
+          who was most famous for his involvement in Bacon's Rebellion which ended in the burning of Jamestown, eventually
+          moved to England where he died, passing the land on to relatives. In 1760, it was purchased by George Washington,
+          becoming <em>River Farm</em>, the northernmost of the five farms that made up Washington's 18
+          <sup>th</sup> century estate.</p>
+        <p>During his lifetime, Washington leased out River Farm to his personal secretary and nephew-in-law, Tobias Lear. The
+          land was further divided by subsequent generations and the hearth of what is now Cedar Knoll was constructed in
+          the early 1800s as a farm house on a plantation named <em>Markland on the
+                                                Potomac</em>. The building was later remodeled by Pauline Walsh and opened
+          to the public as the <em>Mount Vernon View Antique
+                                            Shop</em>.</p>
+        <p>Since 1941, the building operated as an inn and restaurant. In the Fall of 2015, after a brief hiatus, and a new
+          lease under the auspices of a close-knit group of daring culinary artists, <em>Cedar Knoll</em> re-opened as one
+          of the most exciting new restaurants in the Washington Metro.</p>
+      </div>
+    </div>
+    <!-- container text -->
+  </section>
+
+
+
+  <!-- #history -->
+  <section class="section" id="dining">
+
+    <div class="container">
+
+      <h2 class="headline">Dining<span class="icon2"></span></h2>
+      <!-- <a class="badge" href="http://www.opentable.com/single.aspx?rid=193345&restref=193345" target="_blank"><img src="images/DC-PantoneWindowStatic-2016.png"/></a> -->
+      <div class="floatleft">
+        <div class="ot floatleft"><a href="{{ reservations.url }}{{ reservations.id }}{{ reservations.param }}"><img src="images/ot.png" alt="OpenTable Diners' Choice Award 2017"></a></div>
+        <p>At Cedar Knoll, each room has a different feel. There's the
+          <em>Botanical Room</em>, wrapped in windows and old scientific illustrations of plants and flowers. There's the
+          <em>Presidential Room</em> with lush curtains, dark wood, and a 19
+          <sup>th</sup> century parlor feel to it. Then, of course, there's the <em>Log Cabin</em>, which has the most natural
+          character, with logs and chinking, a huge stone fireplace, and our first President looking over it.</p>
+
+      </div>
+    </div>
+    <!-- container -->
+    <ul class="product-list">
+      <li class="product-item">
+        <img alt="Botanical Room - Interior Photo" class="product-image" src="images/botanical.jpg">
+        <h2 class="product-name">Botanical Room</h2>
+      </li>
+      <li class="product-item">
+        <img alt="Presidential Room - Interior Photo" class="product-image" src="images/presidential.jpg">
+        <h2 class="product-name">Presidential Room</h2>
+      </li>
+      <li class="product-item">
+        <img alt="Log Cabin - Interior Photo" class="product-image" src="images/logcabin.jpg">
+        <h2 class="product-name">Log Cabin</h2>
+      </li>
+    </ul>
+    <!-- product-list -->
+  </section>
+  <!-- #products -->
+  <!-- people -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="nav" role="navigation">
+        <div class="container nav-elements">
+          <div class="branding">
+
+            <a href="#home">
+
+                            <img src="images/logostack.png" alt="">
+                        </a>
+
+            <p class="address">{{ contact.address }}</p>
+          </div>
+          <ul class="navbar">
+            <li>
+              <a href="#home">home</a>
+            </li>
+            <li>
+              <a href="#menus">menus</a>
+            </li>
+            <li>
+              <a href="#history">history</a>
+            </li>
+            <li>
+              <a href="#dining">dining</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <p class="legal">&copy; 2017 Cedar Knoll. With love from Andrew, Neal, Chris, and Charlie.</p>
+    </div>
+    <!-- container -->
+  </footer>
+  <!-- footer -->
+  {% block content %}{% endblock %} {% block javascript %}
+  <script src="javascripts/app.js"></script>
+  {% endblock %}
+
+</body>
+
+</html>

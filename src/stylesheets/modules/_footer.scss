@@ -1,0 +1,31 @@
+.footer{
+	width: 100%;
+	color: $color-background;
+	line-height: 100%;
+	text-align: center;
+	@include backImage('../images/img192.jpg', 600px, transparent, $cedarBlue);
+	display: flex;
+	align-items: center;
+
+	.nav{
+		padding-bottom: $spacing-unit;
+
+		img{
+			width: 200px;
+		}
+	}
+
+
+
+.legal{
+	max-width: 700px;
+	line-height: 110%;
+	margin: 0 auto;
+}
+
+			.address{
+		padding: 2rem 0;
+		margin: 0 auto;
+		max-width: 10em;
+	}
+}

@@ -1,0 +1,44 @@
+
+.hero{
+	width: 100%;
+}
+ .nav{
+
+	.nav-elements{
+
+	.branding{
+svg{
+	width: 10em;
+	height: auto;
+	margin: $spacing-unit auto;
+	fill: $cedarGold;
+}
+
+		p{
+			line-height: 100%;
+		}
+
+	}	
+	.navbar{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		list-style-type: none;
+		line-height: $spacing-unit;
+
+		&:last-child{
+			align-items: center;
+		};
+	}
+a{
+	padding: 0 1rem;
+	color: $cedarLightGold;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover{
+	color: $cedarDarkGold;
+}
+	}
+
+}

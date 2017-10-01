@@ -1,0 +1,159 @@
+
+
+.header{
+	color: $cedarGold;
+	display: flex;
+  flex-direction:column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+			min-height: 100vmax;
+
+	@include mappy-bp(small){
+		display: block;
+	}
+	@include mappy-bp(large){
+			    min-height: 100vh;
+	}
+
+
+	.branding{
+		max-width: 200px;
+		margin: 0 auto;
+		@include mappy-bp(small){
+			max-width:300px;
+		}
+	}
+
+
+@include backImage3('../images/food10-small.jpg');
+
+		text-align: center;
+		transition: background .5s ease;
+	@include mappy-bp(small){
+			@include backImage2('../images/food10-med.jpg');
+	}
+	@include mappy-bp(large){
+	@include backImage2('../images/food10.jpg');
+	}
+
+	nav{
+		background: linear-gradient( to bottom, $cedarBlue, rgba(23, 44, 87, .75) 75%, rgba(23, 44, 87, 0)  );
+	background-repeat: no-repeat;
+margin: 0 auto;
+		width: 100%;
+}
+
+	a{
+		text-decoration: none;
+		&:hover{
+			color: $cedarGold;
+		};
+		transition: .5s ease-out;
+
+	}
+
+	i{
+
+		margin: 0 $spacing-unit;
+	}
+
+.primaryinfo{
+	.sprite, .sprite svg{
+		display: inline;
+
+		fill: #fff;
+	}
+	.address, .phone{
+		svg{
+		vertical-align: -10px;
+		}
+
+	}
+
+	.hoursandlocation{
+		margin-bottom: $spacing-unit;
+	}
+
+	.facebook-icon{
+		padding: $spacing-unit/2 0;
+		line-height: $spacing-unit/2;
+
+		svg{
+
+			border-radius: 100%;
+					background-color: #fff;
+						fill: $cedarBlue;
+					&:hover{
+				fill: #fff;
+			stroke: $cedarBlue;
+			background-color: $cedarBlue;
+		};
+		}
+		margin: 0 auto;
+
+
+
+
+	}
+}
+	.makereservation{
+		line-height: 3;
+		padding: .5em;
+		border: 1px solid $cedarGold;
+		color: $cedarLightGold;
+		text-decoration: none;
+
+		&:hover{
+			border: 1px solid $cedarGold;
+			background-color: rgba(23, 44, 87, .8);
+			color: $cedarGold;
+		}
+		}
+	.tagline{
+		display: none;
+	}
+	.chevron svg{
+		padding-right: $spacing-unit/2;
+		fill: #fff;
+		width: $spacing-unit*1.75;
+		margin: 0 auto;
+	}
+
+	@include mappy-bp(large){
+		.tagline{
+			display: block;
+				font-size: 200%;
+					margin-top: 0;
+			line-height: $spacing-unit *3;
+			h1{
+				font-size: 6rem;
+			}
+			p{
+				line-height:1.2;
+				color: #fff;
+							max-width: 20em;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+
+
+.primaryinfo {
+padding-top: 0;
+span{
+display: block;
+	}
+		.times{
+		color: white;
+	}
+
+}
+.branding {
+img{
+	margin: 0 auto;
+}
+}

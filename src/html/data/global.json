@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Cedar Knoll: Historic Dining in Alexandria, Virginia",
+    "shortTitle": "Waterfront Dining in Alexandria",
+    "description":
+      "Established in 1941, Cedar Knoll is a historic restaurant with sweeping views of the Potomac River. Cedar Knoll is set along the beautiful George Washington Parkway, which makes for a wonderful drive. The restaurant was built around a log cabin dating back to the early 1800's, so the history is apparent from the moment you step in. Each room possesses a charming set of qualities adding to the experience. Whether you dine in the comfortable elegance of the Presidential Room or the natural splendor of the Botanical Room, both set the perfect stage for an evening of family, friends, and lovers alike. Cedar Knoll is conveniently located minutes from Old Town Alexandria and the Mount Vernon Estate.",
+    "tagline":
+      "History, romance, and magic culminate at this unforgettable gathering point on the Potomac.",
+    "url": "http://cedarknollva.com/",
+    "share-fb": "images/share-fb.png"
+  },
+  "contact": {
+    "address": "9030 Lucia Ln, Alexandria, VA 22308",
+    "phone": "1-703-780-3665",
+    "maps": {
+      "google": "https://goo.gl/maps/r4zgj3bHi5r"
+    }
+  },
+  "social": {
+    "facebook": {
+      "url": "https://www.facebook.com/cedarknollvirginia",
+      "share-fb": "images/share-fb.png"
+    }
+  },
+  "reservations": {
+    "url": "http://www.opentable.com/single.aspx?rid=",
+    "id": "193345",
+    "param": "&restref=193345",
+    "cta": "Make a Reservation"
+  },
+  "hours": {
+    "lunch": {
+      "title": "Lunch",
+      "days": "Thurs – Fri",
+      "hours": "11-2pm"
+    },
+    "happyHour": {
+      "title": "Happy Hour",
+      "days": "Tues – Fri",
+      "hours": "4–6:30pm"
+    },
+    "dinner": {
+      "title": "Dinner",
+      "days": "Sun, Tues – Thurs",
+      "hours": "5–9pm",
+      "other": {
+        "days": "Fri - Sat",
+        "hours": "5–9:30pm"
+      }
+    },
+    "brunch": {
+      "title": "Brunch",
+      "days": "Sat – Sun",
+      "hours": "11–2pm"
+    }
+  }
+}

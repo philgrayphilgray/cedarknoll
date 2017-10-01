@@ -1,0 +1,109 @@
+
+
+#staff{
+	background-color: $cedarLightGold;
+	.imageheader{
+		@include backImage('../images/food3.jpg', 20vh, transparent, $cedarLightGold, top);
+		background-position: top left;
+
+@include mappy-query(phone){
+			@include backImage('../images/food3.jpg', 20vh, transparent, $cedarLightGold, top);
+		background-position: center center;
+		}
+
+
+	}
+
+	  .headline{
+  margin: 0rem 0 2rem 0;
+span.fleuron{
+  background: url('../images/icon1.svg') no-repeat 40% 40%;
+    width: 6rem;
+  height: 8rem;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: -50%;
+  margin-right: 1rem;
+}
+}
+.people-cards{
+	@include mappy-query(phone){
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.person-card{
+/*		box-shadow: 3px 3px 0px color($cedarBrown alpha(30%));
+		border-radius: 1rem 2rem;*/
+
+		margin: 0 .5rem 3rem .5rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		transition: all .2s ease-in;
+		transform: scale(.9);
+
+		&:hover{
+			transform: scale(1.05);
+		};
+
+		.clip-circle{
+			margin: 1rem 1rem;
+		}
+@include mappy-query(phone){
+			flex: 1 1 calc($item-width/3);
+		}
+	
+		.card-info{
+
+		}
+		.card-name{
+						font-size: 3rem;
+			color: $cedarDarkGold;
+			text-shadow: 0 .5px $cedarBrown;
+		}
+		.card-title{
+			font-size: 2rem;
+			line-height: 100%;
+			color: rgba($cedarRed, .5);
+		}
+		.card-text{
+				font-size: 2.5rem;
+		line-height: 120%;
+			margin: 0 auto;
+			padding: 1% 7%;
+		}
+
+
+	}/*.person-card*/
+}/*.people-cards*/
+.clip-circle {
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: url(/images/bestgroup.jpg) no-repeat;
+    background-position: -160px 0px;
+    background-size: 720px 480px;
+}
+
+.clip-andrew {
+    background-position: -270px -50px;
+}
+
+.clip-chris {
+    background-position: 0px -150px;
+}
+
+.clip-max {
+    background-position: -110px -150px;
+}
+
+.clip-neal {
+    background-position: -370px -150px;
+}
+
+.clip-charlie {
+    background-position: -520px -150px;
+}
+}/*#staff*/

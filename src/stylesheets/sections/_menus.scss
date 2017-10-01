@@ -1,0 +1,56 @@
+#menus {
+  margin: $spacing-unit 0;
+  @include mappy-bp(large){
+  @include backImage('../images/outside.jpg', 400px, shade($cedarBlue, 80%), transparent);
+
+.text-content{
+  background: rgba(255,255,255,.9);
+  width: 100%;
+  padding: $spacing-unit;
+  -webkit-box-shadow: 11px 11px 19px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 11px 19px -10px rgba(0,0,0,0.75);
+box-shadow: 11px 11px 19px -10px rgba(0,0,0,0.75);
+}
+
+}
+.text-content{
+  &:first-child{
+    border-bottom: 2px solid #ccc;
+        margin-bottom: $spacing-unit*2;
+        padding-bottom: $spacing-unit;
+  }
+}
+
+  .icon1{
+    background: url('../images/icon1.png');
+      display: inline-block;
+      margin-left: $spacing-unit/2;
+    width: 48px;
+    height: 76px;
+      vertical-align: -50%;
+  }
+
+  .rabbit{
+    background: url('../images/rabbit.png');
+      display: inline-block;
+      margin-left: $spacing-unit/2;
+    width: 48px;
+    height: 63px;
+      vertical-align: -50%;
+  }
+
+    .headline {
+        float: right;
+       span svg {
+        display: inline-block;
+        margin-right: $spacing-unit;
+        width: 6rem;
+        height: 8rem;
+        vertical-align: -50%;
+    }
+    }
+    a {
+        color: $cedarBrown;
+    }
+
+}
