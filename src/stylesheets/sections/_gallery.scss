@@ -1,0 +1,135 @@
+#gallery {
+  .headline {
+    float: none;
+    text-align: center;
+  }
+  .modal__btn--close {
+    padding: 1rem;
+    display: inline;
+    margin: 1rem;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1000;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #fff;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .gallery__item {
+    width: 100%;
+    height: 300px;
+    margin: 1em 0;
+  }
+  @include mappy-bp(738px) {
+    .gallery__item {
+      height: 200px;
+      width: 200px;
+      margin: 1em;
+      border: 2px solid #fff;
+      box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s ease-in;
+      transform: scale(0.9);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .gallery__item {
+    background-size: cover;
+    backround-position: center;
+    &:nth-child(1) {
+      background-image: url("../images/gallery-cheeseandmeats.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/gallery-copperpitcherandvintageplates.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("../images/gallery-crabcake.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("../images/gallery-picanhasteak.jpg");
+    }
+    &:nth-child(5) {
+      background-image: url("../images/gallery-scallopsandshrimp.jpg");
+    }
+  }
+  .carousel img {
+    max-height: 100vh;
+    margin: 0.5em;
+  }
+
+  .modal {
+    display: none;
+    background: #000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  /*! Flickity v2.0.10
+http://flickity.metafizzy.co
+---------------------------------------------- */
+
+  .flickity-enabled {
+    position: relative;
+  }
+
+  .flickity-enabled:focus {
+    outline: none;
+  }
+
+  .flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  .flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* draggable */
+
+  .flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+}
+.flickity-slider {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
