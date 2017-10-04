@@ -6,6 +6,7 @@
   "dependencies": {
     "blendid": "^4.2.0",
     "eslint": "^4.6.1",
+    "flickity": "^2.0.10",
     "mappy-breakpoints": "^0.2.3"
   },
   "devDependencies": {
