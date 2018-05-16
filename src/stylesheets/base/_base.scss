@@ -100,7 +100,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -114,17 +116,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -132,6 +138,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -218,6 +225,7 @@ a:focus {
 em {
   font-size: 140%;
 }
+
 .floatleft {
   float: left;
 }
@@ -227,7 +235,7 @@ em {
   height: auto;
 }
 
-h2 > img {
+h2>img {
   display: inline-block;
 }
 

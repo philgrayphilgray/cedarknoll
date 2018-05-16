@@ -1,78 +1,93 @@
 // Based on http://codepen.io/javasteve99/pen/hDxpn
-@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal){
-  @font-face{
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
     font-family: $font-family;
     src: url('#{$file-path}.eot');
-    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg##{$font-family}') format('svg');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$file-path}.woff2') format('woff2'),
+      url('#{$file-path}.woff') format('woff'),
+      url('#{$file-path}.ttf') format('truetype'),
+      url('#{$file-path}.svg##{$font-family}') format('svg');
     font-weight: $font-weight;
     font-style: $font-style;
-}
-// Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
-@media screen and (-webkit-min-device-pixel-ratio: 0){
-  @font-face{
-    font-family: $font-family;
-    src: url('#{$file-path}.svg##{$font-family}') format('svg');
-}
-}
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
 }
 
 @mixin backImage(
-	$image,
-	$height,
-	$grstart: rgba(0, 0, 0, .2),
-	$grend: rgba(0, 0, 0, .5),
-	$bgPos: center center){
-	min-height: $height;
-	background: linear-gradient( to bottom, $grstart, $grend ), url($image);
-	background-position: $bgPos;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
+  $image,
+  $height,
+  $grstart: rgba(0, 0, 0, 0.2),
+  $grend: rgba(0, 0, 0, 0.5),
+  $bgPos: center center
+) {
+  min-height: $height;
+  background: linear-gradient(to bottom, $grstart, $grend), url($image);
+  background-position: $bgPos;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 @mixin backImage2(
-	$image,
-	$grstart: rgba(0, 0, 0, .2),
-	$grend: rgba(0, 0, 0, .5),
-	$bgPos: center center){
-	background: linear-gradient( to bottom, $grstart, $grend ), url($image);
-	background-position: $bgPos;
-	background-size: cover;
-	background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
+  $image,
+  $grstart: rgba(0, 0, 0, 0.2),
+  $grend: rgba(0, 0, 0, 0.5),
+  $bgPos: center center
+) {
+  background: linear-gradient(to bottom, $grstart, $grend), url($image);
+  background-position: $bgPos;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 @mixin backImage3(
-	$image,
-	$grstart: rgba(0, 0, 0, .2),
-	$grend: rgba(0, 0, 0, .5)){
-	background: linear-gradient( to bottom, $grstart, $grend ), url($image);
-	background-size: cover;
-			background-position: top left;
-	background-repeat: no-repeat;
-	}
-
-
+  $image,
+  $grstart: rgba(0, 0, 0, 0.2),
+  $grend: rgba(0, 0, 0, 0.5)
+) {
+  background: linear-gradient(to bottom, $grstart, $grend), url($image);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
 
 @mixin clearfix {
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 }
-.clearfix{
-	@include clearfix;
+.clearfix {
+  @include clearfix;
 }
 
 @mixin importfont(
-	$font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+  $font-family,
+  $font-filename,
+  $font-weight: normal,
+  $font-style: normal,
+  $font-stretch: normal
+) {
   @font-face {
     font-family: '#{$font-family}';
     src: url('#{$font-filename}.eot');
     src: url('#{$font-filename}.woff') format('woff'),
-    url('#{$font-filename}.ttf') format('truetype');
+      url('#{$font-filename}.ttf') format('truetype');
     font-weight: $font-weight;
     font-style: $font-style;
     font-stretch: $font-stretch;

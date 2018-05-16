@@ -1,7 +1,12 @@
 #menus {
   margin: $spacing-unit 0;
   @include mappy-bp(large) {
-    @include backImage("../images/outside.jpg", 400px, shade($cedarBlue, 80%), transparent);
+    @include backImage(
+      '../images/outside.jpg',
+      400px,
+      shade($cedarBlue, 80%),
+      transparent
+    );
 
     .text-content {
       background: rgba(255, 255, 255, 0.9);
@@ -21,7 +26,7 @@
   }
 
   .icon1 {
-    background: url("../images/icon1.png");
+    background: url('../images/icon1.png');
     display: inline-block;
     margin-left: $spacing-unit/2;
     width: 48px;
@@ -30,7 +35,7 @@
   }
 
   .rabbit {
-    background: url("../images/rabbit.png");
+    background: url('../images/rabbit.png');
     display: inline-block;
     margin-left: $spacing-unit/2;
     width: 48px;

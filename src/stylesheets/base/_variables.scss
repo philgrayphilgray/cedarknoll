@@ -5,14 +5,14 @@ $font-weight-normal: 400;
 $font-weight-bold: 600;
 $font-weight-heavy: 700;
 
-$cedarBlue: #172C57; /*rgb(23, 44, 87)*/
-$cedarGold: #FAEDC2;
+$cedarBlue: #172c57; /*rgb(23, 44, 87)*/
+$cedarGold: #faedc2;
 $cedarLightGold: lighten($cedarGold, 10%);
-$cedarDarkGold: #DCC77F;
-$cedarLightGreen: #75AF49;
-$cedarDarkGreen: #51764C;
+$cedarDarkGold: #dcc77f;
+$cedarLightGreen: #75af49;
+$cedarDarkGreen: #51764c;
 $cedarBrown: #584953;
-$cedarRed: #AA000F;
+$cedarRed: #aa000f;
 $cedarWinter: #25408f;
 
 $color-main: black;
@@ -25,10 +25,12 @@ $breakpoints: (
 
 // You can use and valid arguments inserted into mappy-bp as the map values. Any of the following would do
 $mappy-queries: (
-  phone: mappy-bp(h max-height small), // media all and (max-height: 29.9375em)
-  tablet: mappy-bp(small large), // @media all and (min-width 30em) and (max-width: 49.375em)
-  desktop: mappy-bp(960px 1200px), // media all and (min-width: 60em) and (max-width: 74.9375em)
-  change-type: mappy-bp(small, $type: screen) // media screen and (min-width: 30em)
+  phone: mappy-bp(h max-height small),
+  /* media all and (max-height: 29.9375em)*/ tablet: mappy-bp(small large),
+  /* @media all and (min-width 30em) and (max-width: 49.375em)*/ desktop:
+    mappy-bp(960px 1200px),
+  /* media all and (min-width: 60em) and (max-width: 74.9375em)*/ change-type:
+    mappy-bp(small, $type: screen) /* media screen and (min-width: 30em)*/
 );
 
 $container-default-width: 80%;
